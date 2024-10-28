@@ -86,7 +86,7 @@ body {
     cursor: pointer;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s;
-    cursor:url("Cursor/Halloween-Candy-Corn-Help-Select-2.png"),pointer;
+    cursor:url("https://github.com/MeldyRose/Portfolio-cpe101/blob/main/Picture/Halloween-Candy-Corn-Help-Select-2.png?raw=true"),pointer;
 }
 
 .arrow:hover {
