@@ -19,7 +19,7 @@ body {
     margin:0;
     transition:background-color 1s ease;
     overflow-x: hidden;
-    cursor:url("Cursor/Halloween-Candy-Corn-Normal-Select.png"),auto;
+    cursor:url("https://github.com/MeldyRose/Portfolio-cpe101/blob/main/Picture/Halloween-Candy-Corn-Normal-Select.png?raw=true"),auto;
 }
 
 .start{
