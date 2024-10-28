@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: red; 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b30000; 
+      }
+      </style>
+</head>
+<body>
+  <div class= "" id="white-overlay"></div> 
+  <div class= "" id="purple-overlay"></div>
+  <div class= "" id="black-overlay"></div>
+    <div class="start" id="start_msg">
+        <h1 id="text">Portfolio</h1>
+        <p id="description">Praewa</p>
+        <div id="overlay"></div>
+    </div>
+    
+    <div class="enter_page" id="enter">
+        <nav id="navbar">
+            <div class="menu-container">
+                <a class="menu-item" id="item1" href="#section1">Home</a>
+                <a class="menu-item" id="item2" href="#section2">About Me</a>
+                <a class="menu-item" id="item3" href="#section3">Education</a>
+                <a class="menu-item" id="item4" href="#section4">Skills</a>
+                <a class="menu-item" id="item5" href="#section5">Contact Me</a>
+            </div>
+            <div class="arrow left" id="prev">❮</div>
+            <div class="arrow right" id="next">❯</div>
+        </nav>
+
+        <!-- Section 1 -->
+        <div class="section" id="section1">
+            <div class="frame-container">
+                <img src="Picture/Untitled design.png" width="400px" alt="My Pic" class="drawing-frame">
+            </div>
+            <div class="text-boxes">
+                <div>
+                    <h2 id="test"><strong>Hello,<br/>I am Praewa Thuwatharanimitkul</strong></h2>
+                </div>
+                <div id="test2"class="text-box">
+                    <p>🎃 Greetings, Frightful Friends! 👻</p>
+                    <p><br/><mark>I am a student at King Mongkut's University of Technology Thonburi,</mark>
+                      <br/>conjuring up this project as my portfolio website.
+                      <br/>As the spooky season approaches and Halloween draws near,
+                      <br/> I invite you to explore my creations and the magic of my work.
+                      <br/>May your days be filled with treats, creativity, and a sprinkle of eerie inspiration! Happy Halloween! 🕷️🍬
+                     </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section" id="section2">
+            <div class="topic-box">
+                <h2 id="test">About me</h2>
+                <p  id="small_text" style="font-size:18px;line-height:30px;text-align:center;"><ins>As a Computer Engineering student at King Mongkut's University of Technology Thonburi,</ins>
+                  <br/>I’ve embraced the magical world of technology,
+                  <br/>opening my mind to endless possibilities. 
+                  <br/>As an only child, this journey has ignited my passion, 
+                  <br/>and I’m grateful to be part of a university that allows me to explore my interests 
+                  <br/>and create through code. 
+                  <br/>Wishing you a spook-tacular Halloween filled with creativity! 🎃✨
+                </p>
+                <img id="BG1" src="Picture/BG1 remake.png">
+            </div>
+            <div class="container" id="container">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:40%">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="Picture/pic1.png" alt="Los Angeles" style="width:100%;">
+                  </div>
+            
+                  <div class="item">
+                    <img src="Picture/pic2.png" alt="Chicago" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="Picture/pic3.png" alt="New york" style="width:100%;">
+                  </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        <!-- Section 3 -->
+        <div class="section" id="section3">
+          <img id="hand" src="Picture/hands.png">
+            <div class="topic-box">
+                <h2 id="test">Education</h2>
+            </div>
+            <div class="empty-text-box" id="small_text"style="font-size:22px;line-height:40px;text-align:center;">
+                <p>I have been a student at <strong><mark>Thidanukhro</mark></strong> since grade 1, all the way to grade 12. 
+                  <br/>Coming from a science-math class, 
+                  <br/>the realms of engineering and computer science are not entirely foreign to me. 
+                  <br/>However, stepping into this department feels like embarking on a thrilling adventure! 
+                  <br/>Each day brings new discoveries, 
+                  <br/>and I’m diving into various fascinating projects along my computer path. 
+                  <br/>I feel both excited and fortunate to be here, 
+                  <br/>ready to conjure up something magical! 🕷️✨
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="button-group2">
+          <button class="active" onclick="changeImage(1)" id="button1">1</button>
+          <button onclick="changeImage(2)" id="button2">2</button>
+          <button onclick="changeImage(3)" id="button3">3</button>
+        </div>
+        <div class="section" id="section4">
+            <div class="topic-box2">
+                <h2 id="test">Skill</h2>
+            </div>
+            <div class="frame-container2">
+                <img src="Picture/Picture0.png" width="500px" alt="Image 1" id="displayImage">
+            </div>
+            
+            <div class="text-box1">
+              <p style="font-size: medium;"><mark>Press the number button!</mark></p>
+                <h3 id="test3">Microsoft Competition</h3>
+                <p style="font-size:17px;line-height:30px;">I have received many opportunies to participate in Microsoft Olympic competition
+                  <br/>and once, second runner-up in MOS Powerpoint and forth runner-up in MOS Word.
+                </p>
+            </div>
+            <div class="text-box2">
+              <h3 id="test3">Model Building</h3>
+              <p style="font-size:17px;line-height:30px;">I have created construction model, 
+                <br/>hair for character in roblox and many more..</p>
+          </div>
+            <div class="text-box3">
+              <h3 id="test3">Designing</h3>
+              <p style="font-size:17px;line-height:30px;">I have received many prizes with designing character and games, 
+                <br/>also once, second runner-up in game creating with scratch both junior and senior high school.</p>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section" id="section5">
+            <div class="video-placeholder">
+                <video autoplay muted loop playsinline width="100%" id="video">
+                    <source src="https://cdn.pixabay.com/video/2022/08/28/129345-744385308_large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="contact-menu">
+                <h2 id="test3"><strong>Contact Me</strong></h2>
+                  <p><strong>IG: 24waawae
+                  <br/>Phone: 062-9676530
+                  <br/>Email: praewa241148@gmail.com</strong>
+                  <p style="font-size:15px;"><ins>If the video doesn't work, please right-clicked and control it yourself.🥲</ins></p>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
