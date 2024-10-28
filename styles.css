@@ -19,7 +19,7 @@ body {
     margin:0;
     transition:background-color 1s ease;
     overflow-x: hidden;
-    cursor:url("https://github.com/MeldyRose/Portfolio-cpe101/blob/main/Picture/Halloween-Candy-Corn-Normal-Select.png?raw=true"),auto;
+    cursor:url("Cursor/Halloween-Candy-Corn-Normal-Select.png"),auto;
 }
 
 .start{
@@ -86,7 +86,7 @@ body {
     cursor: pointer;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s;
-    cursor:url("https://github.com/MeldyRose/Portfolio-cpe101/blob/main/Picture/Halloween-Candy-Corn-Help-Select-2.png?raw=true"),pointer;
+    cursor:url("Cursor/Halloween-Candy-Corn-Help-Select-2.png"),pointer;
 }
 
 .arrow:hover {
