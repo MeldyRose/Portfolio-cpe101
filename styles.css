@@ -1,0 +1,419 @@
+.hidden{
+    display: none;
+}
+
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: beige;
+    color: #968e85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin:0;
+    transition:background-color 1s ease;
+    overflow-x: hidden;
+    cursor:url("Cursor/Halloween-Candy-Corn-Normal-Select.png"),auto;
+}
+
+.start{
+    text-align: center;
+    position: absolute;
+}
+
+#description {
+    font-weight: bold;
+    color: #968e85;
+    font-size: 30px;
+    position: absolute; /* Allows you to position the description relative to the start container */
+    bottom: -5px; /* Align to the bottom */
+    margin-left: 8vh; /* Reset default margin */
+    transform: translate(50%, 50%); /* Slightly adjust position for better alignment */
+}
+
+#text{
+    font-weight: bold;
+    color: #968e85;
+    font-size: 80px;
+} 
+
+/* Add a black background color to the top navigation */
+#navbar {
+    position: sticky; /* Change to sticky */
+    top: 0; /* Stick to the top when scrolling */
+    left: 0; /* Align to the left */
+    width: 100%; /* Make it full width */
+    background-color: rgba(6, 6, 6, 0.5); /* Semi-transparent background */
+    padding: 10px; /* Padding for aesthetic spacing */
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+#navbar.active {
+    background-color: #e86c6c; /* Fully opaque when active */
+}
+
+.menu-container {
+    display: flex;
+    transition: transform 1s ease;
+    width: 100%; /* Set width to 100% to contain all items */
+}
+.menu-item {
+    flex: 1; /* Make each menu item take equal space */
+    text-align: center;
+    color: beige;
+    font-size: 24px;
+    line-height: 50px; /* Center vertically */
+    opacity: 1; /* Always visible */
+    transition: color 1s ease; /* Change transition to color */
+}
+.menu-item.active {
+    opacity: 1; /* Show active item */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: beige;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+    cursor:url("Cursor/Halloween-Candy-Corn-Help-Select-2.png"),pointer;
+}
+
+.arrow:hover {
+    color: white; /* Change color on hover */
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right:40px;
+}
+
+#navbar:hover .arrow {
+    opacity: 1; /* Show arrows on hover */
+}
+
+#overlay {
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 1000vh;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Sit above all content */
+    opacity: 0; /* Initially hidden */
+    cursor:none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-item.active {
+    font-weight: bold; /* Bold for active item */
+    color: yellow; /* Change color for active item */
+}
+
+
+.section {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full width of the viewport */
+    box-sizing: border-box;
+    height: 105vh; /* Full viewport height minus navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px #000;
+    flex-direction: column;
+    z-index: -2;
+
+}
+
+/* Add margin-top only to the first section */
+#section1 {
+    background-image: url("Picture/BG4remake.png"); 
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 420vh; /* Push down below the navbar */
+}
+.drawing-frame{
+    margin-top: 0vh;
+    margin-left: 12vh;
+}
+#small_text{
+    position: relative;
+    z-index: 999;
+}
+#section2 { 
+    background: linear-gradient(to bottom, #AC8CA7, #2e284a);
+}
+#BG1{
+    z-index: 0;
+    align-items: center;
+    width: 100vw;
+    position: absolute;
+    margin-top: -30vh;
+    left:-64vh;
+    opacity: 100%;
+}
+
+#section3 { 
+    background: linear-gradient(to bottom,  #2e284a, #070707,#070707,#423e3e, #281a19);
+}
+#hand{
+    z-index: 0;
+    align-items: center;
+    width: 100vw;
+    position: absolute;
+    margin-top: 15vh;
+    margin-left: -3vh;
+    opacity: 80%;
+}
+
+#section4 { 
+    background: linear-gradient(to bottom,  #281a19,#1e2312, #000000); 
+
+}
+#section5{
+    background-color: rgb(0, 0, 0); 
+    z-index: -5;
+    margin-top: 5.3vh;
+}
+
+.frame-container{
+    display:flex;
+    position: absolute;
+    left: 80px;
+    top: 60px;
+}
+
+.text-boxes {
+    position: absolute;
+    left: 89vh;
+    top: 160px;
+}
+#test2{
+    line-height: 1.5;
+}
+#test{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.5;
+}
+#test3{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.topic-box{
+    position: absolute;
+    text-align: center;
+    margin-top: -500px;
+}
+.topic-box2{
+    position: absolute;
+    left:90px;
+    text-align: left;
+    margin-top: -650px;
+    z-index: 1;
+}
+.frame-container2{
+    display:flex;
+    position:absolute;
+    left:80px;
+    margin-top: 60px;
+    z-index: 0;
+}
+.buttonleft{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px darkslategray;
+    position: absolute;
+    margin-left: 3vh;
+    z-index: 3;
+}
+.buttonleft:active{
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(3px);
+}
+.buttonright{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px darkslategray;
+    position: absolute;
+    margin-left: 168.3vh;
+    z-index: 3;
+}
+.buttonright:active{
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(3px);
+}
+.button-group2{
+    margin-left:100vh;
+    background: none;
+    z-index: 2;
+}
+#button1{
+    top: 340vh;
+    position:absolute;
+    background-color: #3b095a;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px darkslategray;
+}
+
+#button1:active{
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(3px);
+}
+#button2{
+    top: 364vh;
+    position:absolute;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #9f0808;
+    box-shadow: 0 3px 4px darkslategray;
+}
+#button2:active{
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(3px);
+}
+#button3{
+    top: 392vh;
+    position:absolute;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #c36808;
+    box-shadow: 0 3px 4px darkslategray;
+}
+#button3:active{
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(3px);
+}
+.text-box1{
+    position: absolute;
+    left: 120vh;
+    margin-top:-40vh ;
+    line-height: 0.5;
+}
+.text-box2{
+    position: absolute;
+    left: 120vh;
+    margin-top:10vh;
+    line-height: 0.5;
+}
+.text-box3{
+    position: absolute;
+    left: 120vh;
+    margin-top:60vh;
+    line-height: 0.5;
+}
+.video-placeholder{
+    position: absolute;
+    z-index: 0;
+    margin-top: 4vh;
+    left:0;
+}
+.contact-menu{
+    position: absolute;
+    z-index: 2;
+    right:26vh;
+}
+@media (max-width: 1920px) {
+    .body {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+@media (max-height: 1080px) {
+    .body {
+        height: auto; /* Allow height to adjust on smaller screens */
+    }
+}
+.container{
+    margin-top: 35vh;
+}
+#container{
+    margin-left:75vh;
+}
+#white-overlay {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* White background */
+    opacity: 1; /* Start with full opacity */
+    transition: opacity 1s ease; /* Smooth opacity transition */
+    z-index: 0; /* On top of everything */
+}
+#purple-overlay {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* White background */
+    opacity: 0; /* Start with full opacity */
+    transition: opacity 1s ease; /* Smooth opacity transition */
+    z-index: 3; /* On top of everything */
+}
+#black-overlay {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* White background */
+    opacity: 0; /* Start with full opacity */
+    transition: opacity 1s ease; /* Smooth opacity transition */
+    z-index: 3; /* On top of everything */
+}
