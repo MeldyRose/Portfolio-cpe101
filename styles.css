@@ -31,10 +31,10 @@ body {
     font-weight: bold;
     color: #968e85;
     font-size: 30px;
-    position: absolute; /* Allows you to position the description relative to the start container */
-    bottom: -5px; /* Align to the bottom */
-    margin-left: 8vh; /* Reset default margin */
-    transform: translate(50%, 50%); /* Slightly adjust position for better alignment */
+    position: absolute;
+    bottom: -5px; 
+    margin-left: 8vh;
+    transform: translate(50%, 50%); 
 }
 
 #text{
@@ -43,38 +43,37 @@ body {
     font-size: 80px;
 } 
 
-/* Add a black background color to the top navigation */
 #navbar {
-    position: sticky; /* Change to sticky */
-    top: 0; /* Stick to the top when scrolling */
-    left: 0; /* Align to the left */
-    width: 100%; /* Make it full width */
-    background-color: rgba(6, 6, 6, 0.5); /* Semi-transparent background */
-    padding: 10px; /* Padding for aesthetic spacing */
-    z-index: 1000; /* Ensure it's above other elements */
-    transition: background-color 0.3s ease; /* Transition for background color */
+    position: sticky; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(6, 6, 6, 0.5); 
+    padding: 10px;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
 }
 
 #navbar.active {
-    background-color: #e86c6c; /* Fully opaque when active */
+    background-color: #e86c6c;
 }
 
 .menu-container {
     display: flex;
     transition: transform 1s ease;
-    width: 100%; /* Set width to 100% to contain all items */
+    width: 100%;
 }
 .menu-item {
-    flex: 1; /* Make each menu item take equal space */
+    flex: 1; 
     text-align: center;
     color: beige;
     font-size: 24px;
-    line-height: 50px; /* Center vertically */
-    opacity: 1; /* Always visible */
-    transition: color 1s ease; /* Change transition to color */
+    line-height: 50px; 
+    opacity: 1; 
+    transition: color 1s ease; 
 }
 .menu-item.active {
-    opacity: 1; /* Show active item */
+    opacity: 1;
 }
 
 .arrow {
@@ -84,13 +83,13 @@ body {
     font-size: 24px;
     color: beige;
     cursor: pointer;
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     transition: opacity 0.3s;
     cursor:url("Cursor/Halloween-Candy-Corn-Help-Select-2.png"),pointer;
 }
 
 .arrow:hover {
-    color: white; /* Change color on hover */
+    color: white; 
 }
 
 .left {
@@ -102,18 +101,18 @@ body {
 }
 
 #navbar:hover .arrow {
-    opacity: 1; /* Show arrows on hover */
+    opacity: 1; 
 }
 
 #overlay {
-    position: fixed; /* Cover the entire screen */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 1000vh;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 999; /* Sit above all content */
-    opacity: 0; /* Initially hidden */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    opacity: 0; 
     cursor:none;
 }
 html {
@@ -121,17 +120,17 @@ html {
 }
 
 .menu-item.active {
-    font-weight: bold; /* Bold for active item */
-    color: yellow; /* Change color for active item */
+    font-weight: bold;
+    color: yellow; 
 }
 
 
 .section {
     margin: 0;
     padding: 0;
-    width: 100vw; /* Full width of the viewport */
+    width: 100vw; 
     box-sizing: border-box;
-    height: 105vh; /* Full viewport height minus navbar height */
+    height: 105vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,13 +142,12 @@ html {
 
 }
 
-/* Add margin-top only to the first section */
 #section1 {
     background-image: url("Picture/BG4remake.png"); 
     background-size: cover;   
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 420vh; /* Push down below the navbar */
+    margin-top: 420vh; 
 }
 .drawing-frame{
     margin-top: 0vh;
@@ -369,13 +367,13 @@ html {
 }
 @media (max-width: 1920px) {
     .body {
-        width: 100%; /* Take full width on smaller screens */
+        width: 100%; 
     }
 }
 
 @media (max-height: 1080px) {
     .body {
-        height: auto; /* Allow height to adjust on smaller screens */
+        height: auto;
     }
 }
 .container{
@@ -385,35 +383,35 @@ html {
     margin-left:75vh;
 }
 #white-overlay {
-    position: fixed; /* Fixed position to cover the viewport */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* White background */
-    opacity: 1; /* Start with full opacity */
-    transition: opacity 1s ease; /* Smooth opacity transition */
-    z-index: 0; /* On top of everything */
+    background-color: white;
+    opacity: 1; 
+    transition: opacity 1s ease; 
+    z-index: 0; 
 }
 #purple-overlay {
-    position: fixed; /* Fixed position to cover the viewport */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0); /* White background */
-    opacity: 0; /* Start with full opacity */
-    transition: opacity 1s ease; /* Smooth opacity transition */
-    z-index: 3; /* On top of everything */
+    background-color: rgb(0, 0, 0); 
+    opacity: 0; 
+    transition: opacity 1s ease;
+    z-index: 3; 
 }
 #black-overlay {
-    position: fixed; /* Fixed position to cover the viewport */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0); /* White background */
-    opacity: 0; /* Start with full opacity */
-    transition: opacity 1s ease; /* Smooth opacity transition */
-    z-index: 3; /* On top of everything */
+    background-color: rgb(0, 0, 0);
+    opacity: 0; 
+    transition: opacity 1s ease;
+    z-index: 3; 
 }
