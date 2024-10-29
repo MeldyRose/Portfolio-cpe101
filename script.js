@@ -1,4 +1,3 @@
-// Function to make text disappear and change background color
 function disappearTextAndChangeBackground(duration) {
     const text = document.getElementById("text");
     const description = document.getElementById("description");
@@ -22,7 +21,7 @@ function disappearTextAndChangeBackground(duration) {
         document.body.style.backgroundImage = "url('Picture/BG5 remake.png')";
         document.body.style.width = `${window.innerWidth}px`;
         document.body.style.height = `${window.innerHeight}px`;
-        body.style.color = "beige"; // Change text color
+        body.style.color = "beige";
         
         setTimeout(() => {
             text.style.transition = 'opacity 1s ease'; 
@@ -70,117 +69,104 @@ function AfterLoadingPage() {
 function showMenuItems() {
     // Reset all items
     menuItems.forEach((item) => {
-        item.classList.remove('active'); // Remove active class
-        item.style.color = 'beige'; // Reset color
+        item.classList.remove('active');
+        item.style.color = 'beige';
     });
-    // Show current item
-    menuItems[currentIndex].classList.add('active'); // Add active class to current item
-    menuItems[currentIndex].style.color = 'yellow'; // Highlight active item
-    // Sync with scrolling
+    menuItems[currentIndex].classList.add('active');
+    menuItems[currentIndex].style.color = 'yellow';
     document.querySelector('.menu-container').style.transform = `translateX(-${(currentIndex * 100) / menuItems.length}%)`;
-    // Update arrows
     updateArrows();
 }
-// Functions to navigate through menu items
 function showPrevious() {
     if (currentIndex === 0) {
-        currentIndex = menuItems.length - 1; // Wrap to last menu
+        currentIndex = menuItems.length - 1;
     } else {
-        currentIndex--; // Go back one menu
+        currentIndex--;
     }
-    showMenuItems(); // Refresh the displayed items
-    scrollToSection(currentIndex); // Scroll to section
+    showMenuItems(); 
+    scrollToSection(currentIndex);
 }
 
 function showNext() {
     if (currentIndex === menuItems.length - 1) {
-        currentIndex = 0; // Wrap to first menu
+        currentIndex = 0;
     } else {
-        currentIndex++; // Move to the next menu
+        currentIndex++;
     }
-    showMenuItems(); // Refresh the displayed items
-    scrollToSection(currentIndex); // Scroll to section
+    showMenuItems();
+    scrollToSection(currentIndex);
 }
 
-// Function to scroll to a specific section
 function scrollToSection(index) {
     const section = document.getElementById(`section${index + 1}`);
-    section.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the section
+    section.scrollIntoView({ behavior: 'smooth' });
 }
-// Update arrow visibility based on current index
 function updateArrows() {
     const leftArrow = document.getElementById('prev');
     const rightArrow = document.getElementById('next');
 
-    // Show left arrow for first section and last section
     if (currentIndex === 0) {
-        leftArrow.style.opacity = 1; // Show left arrow
+        leftArrow.style.opacity = 1; 
     } else {
-        leftArrow.style.opacity = 1; // Always show left arrow
+        leftArrow.style.opacity = 1;
     }
-
-    // Show right arrow for last section and first section
     if (currentIndex === menuItems.length - 1) {
-        rightArrow.style.opacity = 1; // Show right arrow
+        rightArrow.style.opacity = 1;
     } else {
-        rightArrow.style.opacity = 1; // Always show right arrow
+        rightArrow.style.opacity = 1;
     }
 }
 
-// Navbar scroll behavior
-let lastScrollY = window.scrollY; // Track last scroll position
+let lastScrollY = window.scrollY;
 let navbar = document.getElementById('navbar');
-let navbarHeight = navbar.offsetHeight; // Get the navbar height
+let navbarHeight = navbar.offsetHeight; 
 let isScrollingUp = false;
 
 window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY; // Current scroll position
-    const scrollDifference = currentScrollY - lastScrollY; // Calculate the difference
+    const currentScrollY = window.scrollY;
+    const scrollDifference = currentScrollY - lastScrollY;
 
     if (scrollDifference > 0 && isScrollingUp) {
-        // Scrolling down
+        
         isScrollingUp = false;
         navbar.style.transition = 'transform 0.3s ease';
-        navbar.style.transform = `translateY(-${navbarHeight}px)`; // Move navbar off the screen
+        navbar.style.transform = `translateY(-${navbarHeight}px)`;
     } else if (scrollDifference < 0 && !isScrollingUp) {
-        // Scrolling up
+        
         isScrollingUp = true;
         navbar.style.transition = 'transform 0.3s ease';
-        navbar.style.transform = `translateY(0)`; // Bring navbar back into view
+        navbar.style.transform = `translateY(0)`;
     }
 
-    lastScrollY = currentScrollY; // Update last scroll position
+    lastScrollY = currentScrollY; 
 
-    // Update current index based on scroll position
     updateCurrentIndexBasedOnScroll();
 });
 
-// Function to update current index based on scroll position
+
 function updateCurrentIndexBasedOnScroll() {
     const sections = document.querySelectorAll('.section');
     sections.forEach((section, index) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentIndex = index; // Update current index
-            showMenuItems(); // Refresh menu items
+            currentIndex = index; 
+            showMenuItems(); 
         }
     });
 }
 
-// Initialize menu items and set up event listeners
+
 const menuItems = document.querySelectorAll('.menu-item');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 let currentIndex = 0;
 
-// Event listeners for arrows
 prevButton.addEventListener('click', showPrevious);
 nextButton.addEventListener('click', showNext);
 
-// Initialize functions on page load
 disappearTextAndChangeBackground(3000);
 AfterLoadingPage();
-showMenuItems(); // Call this to display the first items when the page loads
+showMenuItems();
 
 function changeImage(imageNumber) {
     let currentImage = 1;
@@ -189,12 +175,10 @@ function changeImage(imageNumber) {
         2: "Picture/Picture2.png",
         3: "Picture/Picture1.png"
     };
-    // Update image source (using placeholder images for demonstration)
     const img = document.getElementById('displayImage');
 
     img.src = images[imageNumber];
     
-    // Update active button state
     const buttons = document.querySelectorAll('button');
     buttons.forEach((btn, index) => {
         if (index + 1 === imageNumber) {
@@ -206,12 +190,8 @@ function changeImage(imageNumber) {
     
     currentImage = imageNumber;
 }
-
-// Other existing code for scrolling and loading
 document.addEventListener("DOMContentLoaded", function() {
     const content = document.querySelector('.content');
-
-    // Example of changing the scrollbar color on a button click
     const button = document.createElement('button');
     button.innerText = "Change Scrollbar Color";
     document.body.prepend(button);
